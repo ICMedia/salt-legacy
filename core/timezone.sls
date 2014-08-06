@@ -4,14 +4,14 @@ timezone:
   pkg.installed:
     - name: tzdata
 
-  file:
-    - managed:
-      - name: /etc/timezone
-      - template: jinja
-      - contents: {{ timezone }} 
-      - requires:
-        - pkg: timezone
+/etc/timezone:
+  file.managed:
+    - template: jinja
+    - contents: {{ timezone }} 
+    - requires:
+      - pkg: timezone
 
-    - symlink:
-      - name: /etc/localtime
-      - target: /usr/share/zoneinfo/{{ timezone }}
+/etc/localtime:
+  file.symlink:
+    - name: /etc/localtime
+    - target: /usr/share/zoneinfo/{{ timezone }}
