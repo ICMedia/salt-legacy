@@ -8,6 +8,8 @@
       - pkg: salt-minion
 
 salt-minion:
+  pkg.installed
+
   service:
     - names:
       - salt-minion

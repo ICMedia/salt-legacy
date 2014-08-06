@@ -8,6 +8,8 @@
       - pkg: salt-master 
 
 salt-master:
+  pkg.installed
+
   service:
     - names:
       - salt-master
