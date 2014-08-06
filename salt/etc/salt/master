@@ -63,7 +63,7 @@ sign_pub_messages: False
 state_top: top.sls
 renderer: yaml_jinja
 state_verbose: True
-state_output: full
+state_output: mixed
 
 
 #####      File Server settings      #####
