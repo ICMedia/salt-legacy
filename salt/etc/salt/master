@@ -1,0 +1,157 @@
+##### Primary configuration settings #####
+##########################################
+default_include: master.d/*.conf
+
+#interface: 0.0.0.0
+#ipv6: False
+
+publish_port: 4505
+ret_port: 4506
+
+user: root
+
+#max_open_files: 100000
+#worker_threads: 5
+
+#pidfile: /var/run/salt-master.pid
+
+# The root directory prepended to these options: pki_dir, cachedir,
+# sock_dir, log_file, autosign_file, extension_modules, key_logfile, pidfile.
+root_dir: /
+pki_dir: /etc/salt/pki/master
+cachedir: /var/cache/salt/master
+sock_dir: /var/run/salt/master
+
+# Verify and set permissions on configuration directories at startup
+verify_env: True
+
+# Set the number of hours to keep old job information in the job cache
+keep_jobs: 24
+
+# Set the default timeout for the salt command and api, the default is 5
+# seconds
+timeout: 5
+
+# The loop_interval option controls the seconds for the master's maintinance
+# process check cycle. This process updates file server backends, cleans the
+# job cache and executes the scheduler.
+loop_interval: 60
+
+output: nested
+color: True
+
+job_cache: True
+minion_data_cache: True
+
+#####        Security settings       #####
+##########################################
+open_mode: False
+auto_accept: False
+sign_pub_messages: False
+
+#####    Master Module Management    #####
+##########################################
+# Add any additional locations to look for master runners
+#runner_dirs: []
+
+# Enable Cython for master side modules
+#cython_enable: False
+
+
+#####      State System settings     #####
+##########################################
+state_top: top.sls
+renderer: yaml_jinja
+state_verbose: True
+state_output: full
+
+
+#####      File Server settings      #####
+##########################################
+hash_type: sha512
+#file_buffer_size: 1048576
+file_ignore_regex:
+  - '/\.svn($|/)'
+  - '/\.git($|/)'
+file_ignore_glob:
+ - '*.pyc'
+ - '*/somefolder/*.bak'
+ - '*.swp'
+
+fileserver_backend:
+  - git
+
+gitfs_remotes:
+  - git://github.com/ICMedia/salt.git
+
+
+#####         Pillar settings        #####
+##########################################
+pillar_roots:
+  base:
+    - /srv/pillar
+
+#ext_pillar:
+#  - hiera: /etc/hiera.yaml
+#  - cmd_yaml: cat /etc/salt/yaml
+
+#pillar_opts: True
+
+
+#####          Syndic settings       #####
+##########################################
+order_masters: False
+
+#####      Peer Publish settings     #####
+##########################################
+#peer:
+#  foo.example.com:
+#    - test.*
+#    - pkg.*
+
+#peer_run:
+#  foo.example.com:
+#    - manage.up
+
+
+#####         Logging settings       #####
+##########################################
+#log_file: /var/log/salt/master
+#key_logfile: /var/log/salt/key
+#log_level: warning
+#log_level_logfile: warning
+#log_datefmt: '%H:%M:%S'
+#log_datefmt_logfile: '%Y-%m-%d %H:%M:%S'
+#log_fmt_console: '[%(levelname)-8s] %(message)s'
+#log_fmt_logfile: '%(asctime)s,%(msecs)03.0f [%(name)-17s][%(levelname)-8s] %(message)s'
+#   log_granular_levels:
+#     'salt': 'warning',
+#     'salt.modules': 'debug'
+
+
+#####         Node Groups           #####
+##########################################
+#nodegroups:
+#  group1: 'L@foo.domain.com,bar.domain.com,baz.domain.com and bl*.domain.com'
+#  group2: 'G@os:Debian and foo.domain.com'
+
+
+#####     Range Cluster settings     #####
+##########################################
+# The range server (and optional port) that serves your cluster information
+# https://github.com/grierj/range/wiki/Introduction-to-Range-with-YAML-files
+#
+#range_server: range:80
+
+
+#####     Windows Software Repo settings #####
+##############################################
+# Location of the repo on the master
+#win_repo: '/srv/salt/win/repo'
+
+# Location of the master's repo cache file
+#win_repo_mastercachefile: '/srv/salt/win/repo/winrepo.p'
+
+# List of git repositories to include with the local repo
+#win_gitrepos:
+#  - 'https://github.com/saltstack/salt-winrepo.git'
