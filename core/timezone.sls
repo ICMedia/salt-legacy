@@ -15,3 +15,4 @@ timezone:
   file.symlink:
     - name: /etc/localtime
     - target: /usr/share/zoneinfo/{{ timezone }}
+    - force: true
