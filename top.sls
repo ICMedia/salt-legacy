@@ -6,3 +6,6 @@ base:
     - core.timezone
 
     - salt.minion
+
+  'salt-master*':
+    - salt.master
