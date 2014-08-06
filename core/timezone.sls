@@ -5,13 +5,13 @@ timezone:
     - name: tzdata
 
   file:
-    managed:
+    - managed:
       - name: /etc/timezone
       - template: jinja
       - contents: {{ timezone }} 
       - requires:
         - pkg: timezone
 
-    symlink:
+    - symlink:
       - name: /etc/localtime
       - target: /usr/share/zoneinfo/{{ timezone }}
