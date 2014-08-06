@@ -10,6 +10,7 @@
 salt-master:
   pkg.installed
 
+salt-master-running:
   service:
     - names:
       - salt-master

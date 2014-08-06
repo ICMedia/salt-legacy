@@ -10,6 +10,7 @@
 salt-minion:
   pkg.installed
 
+salt-minion-running:
   service:
     - names:
       - salt-minion
