@@ -1,0 +1,11 @@
+Welcome to {{ grains['fqdn'] }}
+Running: {{ grains['os'] }} {{ grains['osrelease'] }} ({{ grains['oscodename'] }})
+
+===============================================
+=       This server is managed by Salt.       =
+=---------------------------------------------=
+= LOCAL CHANGES MAY BE WIPED OUT AT ANY TIME. =
+=---------------------------------------------=
+=    FAILURE TO COMPLY MAY RESULT IN YOUR     =
+=               EXTERMINATION                 =
+===============================================

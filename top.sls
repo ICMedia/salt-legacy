@@ -4,6 +4,7 @@ base:
     - core.sudo
     - core.scm
     - core.timezone
+    - core.motd
 
     - salt.minion
 
