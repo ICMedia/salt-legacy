@@ -83,6 +83,7 @@ fileserver_backend:
 
 gitfs_remotes:
   - git://github.com/ICMedia/salt.git
+  - git://github.com/ICMedia/icecast2-formula.git
 
 
 #####         Pillar settings        #####
