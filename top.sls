@@ -10,3 +10,6 @@ base:
 
   'salt-master':
     - salt.master
+
+  'icradio-firestar':
+    - icecast2
