@@ -87,8 +87,8 @@ file_client: remote
 ###########################################
 #open_mode: False
 #permissive_pki_access: False
-#state_verbose: True
-#state_output: full
+state_verbose: True
+state_output: terse
 #master_finger: ''
 
 ######         Thread settings        #####
