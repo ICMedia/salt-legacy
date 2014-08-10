@@ -11,7 +11,7 @@ git@github.com:ICRadio/www.git:
 
 /etc/nginx/sites-available/icradio-www.conf:
   file.managed:
-    - source: salt://sites/icradio/www/conf/nginx.conf
+    - source: salt://sites/icradio/members/conf/nginx.conf
     - user: root
     - group: root
     - mode: 644
@@ -23,7 +23,7 @@ git@github.com:ICRadio/www.git:
 
 /srv/www/icradio/members/config.inc.php:
   file.managed:
-    - source: salt://sites/icradio/www/conf/config.inc.php
+    - source: salt://sites/icradio/members/conf/config.inc.php
     - user: www-data
     - group: www-data
     - mode: 400
