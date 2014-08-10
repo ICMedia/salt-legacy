@@ -21,6 +21,14 @@ git@github.com:ICRadio/www.git:
     - watched_in:
       - service: nginx
 
+/etc/nginx/sites-enabled/icradio-www.conf:
+  file.symlink:
+    - target: /etc/nginx/sites-available/icradio-www.conf
+    - requires:
+      - file: /etc/nginx/sites-available/icradio-www.conf
+    - watched_in:
+      - service: nginx
+
 /srv/www/icradio/members/config.inc.php:
   file.managed:
     - source: salt://sites/icradio/members/conf/config.inc.php
