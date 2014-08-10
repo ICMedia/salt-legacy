@@ -5,7 +5,7 @@ git@github.com:ICRadio/www.git:
 
 /srv/www/icradio/members:
   file.symlink:
-    - target: /srv/www/icradio/members.git/www
+    - target: /srv/www/icradio/members.git/html
     - requires:
       - git: git@github.com:ICRadio/www.git
 
