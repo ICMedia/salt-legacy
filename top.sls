@@ -17,3 +17,5 @@ base:
   'galen':
     - postgres
     - nginx
+    - mysql
+    - mysql.client
