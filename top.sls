@@ -23,7 +23,6 @@ base:
     - mysql.client
     - php
     - php.fpm
-    - php.mysql
     - php.mysqlnd
     - php.pgsql
     - php.gd
