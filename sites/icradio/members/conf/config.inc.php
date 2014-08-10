@@ -2,7 +2,7 @@
 
 // DOC_ROOT is occasionally defined with a / and sometimes without
 // if we define it with we should be OK whatever happens
-define('SITE_DOC_ROOT', '/srv/www/icradio/members');
+define('SITE_DOC_ROOT', '/srv/www/icradio/members/');
 
 define('DB_HOST', '{{ salt['pillar.get']('icradio:members_db:host') }}');
 define('DB_USER', '{{ salt['pillar.get']('icradio:members_db:user') }}');
