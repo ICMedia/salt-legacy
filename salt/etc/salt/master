@@ -84,6 +84,9 @@ fileserver_backend:
 gitfs_remotes:
   - git://github.com/ICMedia/salt.git
   - git://github.com/ICMedia/icecast2-formula.git
+  - git://github.com/ICMedia/nginx-formula.git
+  - git://github.com/ICMedia/postgres-formula.git
+  - git://github.com/ICMedia/mysql-formula.git
 
 
 #####         Pillar settings        #####
@@ -91,6 +94,9 @@ gitfs_remotes:
 pillar_roots:
   base:
     - /srv/pillar
+
+ext_pillar:
+  - git: master git://github.com/ICMedia/salt-pillar.git
 
 #ext_pillar:
 #  - hiera: /etc/hiera.yaml
