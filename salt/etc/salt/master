@@ -87,6 +87,7 @@ gitfs_remotes:
   - git://github.com/ICMedia/nginx-formula.git
   - git://github.com/ICMedia/postgres-formula.git
   - git://github.com/ICMedia/mysql-formula.git
+  - git://github.com/ICMedia/php-formula.git
 
 
 #####         Pillar settings        #####
