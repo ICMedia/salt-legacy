@@ -19,3 +19,14 @@ base:
     - nginx
     - mysql
     - mysql.client
+    - php
+    - php.fpm
+    - php.mysql
+    - php.mysqlnd
+    - php.pgsql
+    - php.suhosin
+    - php.json
+    - php.gd
+    - php.curl
+    - php.cli
+    - php.adodb
