@@ -17,6 +17,8 @@ base:
   'galen':
     - postgres
     - nginx
+    - ssl
+    - ssl.certs
     - mysql
     - mysql.client
     - php
@@ -24,8 +26,6 @@ base:
     - php.mysql
     - php.mysqlnd
     - php.pgsql
-    - php.suhosin
-    - php.json
     - php.gd
     - php.curl
     - php.cli
