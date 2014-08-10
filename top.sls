@@ -30,3 +30,4 @@ base:
     - php.curl
     - php.cli
     - php.adodb
+    - sites.icradio.members
