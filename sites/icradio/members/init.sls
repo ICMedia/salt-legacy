@@ -18,7 +18,7 @@ git@github.com:ICRadio/www.git:
     - template: jinja
     - requires:
       - file: /srv/www/icradio/members
-    - watched_in:
+    - watch_in:
       - service: nginx
 
 /etc/nginx/sites-enabled/icradio-www.conf:
@@ -26,7 +26,7 @@ git@github.com:ICRadio/www.git:
     - target: /etc/nginx/sites-available/icradio-www.conf
     - requires:
       - file: /etc/nginx/sites-available/icradio-www.conf
-    - watched_in:
+    - watch_in:
       - service: nginx
 
 /srv/www/icradio/members/config.inc.php:
