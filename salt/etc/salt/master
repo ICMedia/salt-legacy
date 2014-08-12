@@ -47,7 +47,7 @@ minion_data_cache: True
 ##########################################
 open_mode: False
 auto_accept: False
-sign_pub_messages: False
+sign_pub_messages: True
 
 #####    Master Module Management    #####
 ##########################################

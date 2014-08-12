@@ -8,7 +8,9 @@
       - pkg: salt-master 
 
 salt-master:
-  pkg.installed
+  pkg.latest:
+    - require:
+      - pkgrepo: salt
 
 salt-master-running:
   service:

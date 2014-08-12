@@ -8,7 +8,9 @@
       - pkg: salt-minion
 
 salt-minion:
-  pkg.installed
+  pkg.latest:
+    - require:
+      - pkgrepo: salt
 
 salt-minion-running:
   service:
