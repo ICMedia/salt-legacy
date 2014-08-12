@@ -39,7 +39,7 @@ git@github.com:ICRadio/www.git:
 
 /srv/www/icradio/members/members/wiki/LocalSettings.php:
   file.managed:
-    - source: salt://site/icradio/members/conf/LocalSettings.php
+    - source: salt://sites/icradio/members/conf/LocalSettings.php
     - user: www-data
     - group: www-data
     - mode: 400
