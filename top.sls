@@ -6,6 +6,7 @@ base:
     - core.timezone
     - core.motd
 
+    - salt.repo
     - salt.minion
 
   'salt-master':
