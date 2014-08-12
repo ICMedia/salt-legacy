@@ -36,3 +36,11 @@ git@github.com:ICRadio/www.git:
     - group: www-data
     - mode: 400
     - template: jinja
+
+/srv/www/icradio/members/members/wiki/LocalSettings.php:
+  file.managed:
+    - source: salt://site/icradio/members/conf/LocalSettings.php
+    - user: www-data
+    - group: www-data
+    - mode: 400
+    - template: jinja
