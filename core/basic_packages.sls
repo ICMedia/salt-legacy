@@ -17,3 +17,6 @@ basic-packages:
       - debian-goodies
 
       - vim
+
+      - python
+      - python-virtualenv
