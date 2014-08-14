@@ -31,3 +31,5 @@ base:
     - php.cli
     - php.adodb
     - sites.icradio.members
+    - sites.icradio.www
+    - supervisor
