@@ -1,5 +1,6 @@
-libmysqlclient-dev:
-  pkg.installed
-
-libpq-dev:
-  pkg.installed
+dev_packages:
+  pkg:
+    - installed
+    - names:
+      - libmysqlclient-dev
+      - libpq-dev
