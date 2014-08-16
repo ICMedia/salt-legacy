@@ -31,7 +31,7 @@ icradio.www collectstatic:
     - name: django.collectstatic
     - bin_env: /srv/www/icradio/www/venv
     - settings_module: icradioweb.settings
-    - pythonpath: /srv/www/icradio/www/code/modules:/srv/www/icradio/www/code/modules/icradioweb/mainapp
+    - pythonpath: /srv/www/icradio/www/code/modules
     - noinput: True
     - require:
       - virtualenv: /srv/www/icradio/www/venv
