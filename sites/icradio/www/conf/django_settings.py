@@ -46,6 +46,12 @@ MEDIA_ROOT = '/srv/www/icradio/www/public_html/media/'
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/media/'
 
+# Absolute path to the directory that holds static content.
+STATIC_ROOT = '/srv/www/icradio/www/public_html/static/'
+
+# URL that handles the media served from STATIC_ROOT.
+STATIC_URL = '/static/'
+
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
