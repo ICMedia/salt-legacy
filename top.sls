@@ -16,6 +16,8 @@ base:
     - icecast2
 
   'galen':
+    - core.supervisor
+    - core.py_dev_packages
     - postgres
     - nginx
     - ssl
@@ -32,4 +34,3 @@ base:
     - php.adodb
     - sites.icradio.members
     - sites.icradio.www
-    - supervisor
