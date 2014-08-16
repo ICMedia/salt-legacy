@@ -14,6 +14,16 @@
     - require:
       - file: /srv/www/icradio/www/conf/supervisor.conf
 
+/srv/www/icradio/www/conf/app.py:
+  file.managed:
+    - source: salt://sites/icradio/www/conf/app.py
+    - user: root
+    - group: root
+    - mode: 755
+    - template: jinja
+    - require:
+        - pkg: supervisor
+
 icradio_www_gunicorn:
   supervisord:
     - running
@@ -22,11 +32,13 @@ icradio_www_gunicorn:
       - git: git@github.com:ICRadio/icr-mainsite.git
       - file: /etc/supervisor/conf.d/icradio-www.conf
       - file: /srv/www/icradio/www/conf/gunicorn.py
+      - file: /srv/www/icradio/www/conf/app.py
       - file: /srv/www/icradio/www/code
       - virtualenv: /srv/www/icradio/www/venv
     - watch:
       - file: /etc/nginx/sites-enabled/icradio-www.conf 
       - file: /etc/supervisor/conf.d/icradio-www.conf
       - file: /srv/www/icradio/www/conf/gunicorn.py
+      - file: /srv/www/icradio/www/conf/app.py
       - virtualenv: /srv/www/icradio/www/venv
       - git: git@github.com:ICRadio/icr-mainsite.git
