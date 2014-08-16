@@ -4,3 +4,5 @@ dev_packages:
     - names:
       - libmysqlclient-dev
       - libpq-dev
+      - python-virtualenv
+      - python-pip
